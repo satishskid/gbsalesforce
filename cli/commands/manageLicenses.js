@@ -5,7 +5,7 @@ async function listLicenses(orgId) {
   try {
     dotenv.config();
     
-    const response = await axios.get(`${process.env.DEPLOY_URL}/.netlify/functions/listLicenses?orgId=${orgId}`);
+    const response = await axios.get(`${process.env.DEPLOY_URL}/api/listLicenses?org_id=${orgId}`);
     const licenses = response.data;
     
     console.log('\n📋 Active Licenses:');
@@ -21,6 +21,11 @@ async function listLicenses(orgId) {
     
   } catch (error) {
     console.error('❌ Failed to list licenses:', error.message);
+    if (error.response) {
+      console.error('Response data:', error.response.data);
+      console.error('Response status:', error.response.status);
+    }
+    process.exit(1);
   }
 }
 
@@ -30,15 +35,15 @@ async function createLicense(orgId, role, name, email, expiresDays = 30) {
     
     const expiresAt = new Date(Date.now() + expiresDays * 24 * 60 * 60 * 1000).toISOString();
     
-    const response = await axios.post(`${process.env.DEPLOY_URL}/.netlify/functions/createLicense`, {
-      orgId,
+    const response = await axios.post(`${process.env.DEPLOY_URL}/api/createLicense`, {
+      org_id: orgId,
       role,
       name,
       email,
-      expiresAt
+      expires_at: expiresAt
     });
     
-    const license = response.data;
+    const license = response.data.license;
     const licenseToken = Buffer.from(JSON.stringify({
       ...license,
       id: license.id
@@ -53,6 +58,10 @@ async function createLicense(orgId, role, name, email, expiresDays = 30) {
     return inviteUrl;
   } catch (error) {
     console.error('❌ License creation failed:', error.message);
+    if (error.response) {
+      console.error('Response data:', error.response.data);
+      console.error('Response status:', error.response.status);
+    }
     process.exit(1);
   }
 }
@@ -61,9 +70,9 @@ async function revokeLicense(orgId, licenseId) {
   try {
     dotenv.config();
     
-    await axios.post(`${process.env.DEPLOY_URL}/.netlify/functions/revokeLicense`, {
-      orgId,
-      licenseId
+    await axios.post(`${process.env.DEPLOY_URL}/api/revokeLicense`, {
+      org_id: orgId,
+      license_id: licenseId
     });
     
     console.log('✅ License revoked successfully!');

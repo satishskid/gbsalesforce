@@ -22,17 +22,17 @@ async function createTenantCommand(orgName, planType = 'standard', maxLicenses =
       maxLicenses
     });
     
-    const org = orgResponse.data;
+    const org = orgResponse.data.organization;
     
     // Create CEO user
     const ceoResponse = await axios.post(`${process.env.DEPLOY_URL}/api/createUser`, {
-      orgId: org.id,
+      org_id: org.id,
       role: 'ceo',
       name: 'CEO',
       email: `ceo@${orgName.toLowerCase().replace(/\s+/g, '')}.com`
     });
     
-    const ceo = ceoResponse.data;
+    const ceo = ceoResponse.data.user;
     
     console.log('✅ Tenant created successfully!');
     console.log(`\nOrganization Details:`);
@@ -75,6 +75,10 @@ ADMIN_URL=${adminUrl}`;
     
   } catch (error) {
     console.error('❌ Tenant creation failed:', error.message);
+    if (error.response) {
+      console.error('Response data:', error.response.data);
+      console.error('Response status:', error.response.status);
+    }
     process.exit(1);
   }
 }

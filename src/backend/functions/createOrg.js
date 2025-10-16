@@ -10,7 +10,11 @@ const handler = async (event, context) => {
   }
 
   try {
-    const { name, industry, plan_type, max_licenses } = JSON.parse(event.body);
+    const { name, industry, planType, plan_type, maxLicenses, max_licenses } = JSON.parse(event.body);
+    
+    // Handle both camelCase and snake_case for compatibility
+    const planTypeValue = planType || plan_type || 'standard';
+    const maxLicensesValue = maxLicenses || max_licenses || 10;
 
     // Validate required fields
     if (!name) {
@@ -23,7 +27,7 @@ const handler = async (event, context) => {
     // Insert organization into database
     const result = await query(
       'INSERT INTO organizations (name, industry, plan_type, max_licenses) VALUES ($1, $2, $3, $4) RETURNING *',
-      [name, industry || 'healthcare', plan_type || 'standard', max_licenses || 10]
+      [name, industry || 'healthcare', planTypeValue, maxLicensesValue]
     );
 
     return {

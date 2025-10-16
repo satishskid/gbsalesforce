@@ -10,7 +10,8 @@ const handler = async (event, context) => {
   }
 
   try {
-    const { orgId } = event.queryStringParameters || {};
+    // Handle both direct function calls and API gateway calls
+    const orgId = event.queryStringParameters?.org_id || event.queryStringParameters?.orgId || event.query?.org_id || event.query?.orgId;
 
     // Validate required fields
     if (!orgId) {
