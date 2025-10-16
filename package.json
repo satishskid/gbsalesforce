@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/backend/server.js",
     "dev": "nodemon src/backend/server.js",
-    "build": "webpack --mode production --config webpack.config.cjs && cp src/frontend/index.html dist/",
+    "build": "webpack --mode production --config webpack.config.cjs && cp src/frontend/index.html dist/ && cp src/frontend/landing.html dist/ && cp src/frontend/signup.html dist/ && cp src/frontend/login.html dist/",
     "test": "jest",
     "migrate": "node -r dotenv/config ./node_modules/.bin/node-pg-migrate up"
   },

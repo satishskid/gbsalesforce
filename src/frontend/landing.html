@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sales4ce - The ultimate SaaS platform for healthcare sales teams. Manage organizations, licenses, CME camps, and leverage AI insights for better sales performance.">
+    <meta name="keywords" content="healthcare sales, SaaS platform, CME management, AI sales tools, license management, medical sales software">
+    <meta name="author" content="sales4ce">
+    <title>sales4ce - Healthcare Sales SaaS Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="sales4ce - Healthcare Sales SaaS Platform">
+    <meta property="og:description" content="Boost your healthcare sales team's performance with our comprehensive SaaS platform featuring CME management, AI insights, and license control.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://healthcare-sales-saas.netlify.app">
+    <meta property="og:image" content="https://healthcare-sales-saas.netlify.app/preview.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="sales4ce - Healthcare Sales SaaS Platform">
+    <meta name="twitter:description" content="Boost your healthcare sales team's performance with our comprehensive SaaS platform featuring CME management, AI insights, and license control.">
+    <meta name="twitter:image" content="https://healthcare-sales-saas.netlify.app/preview.png">
+    <style>
+        /* Landing Page Specific Styles */
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background-color: #fbbf24;
+            color: #1f2937;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .features {
+            padding: 4rem 1rem;
+            background-color: #f9fafb;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .benefits {
+            padding: 4rem 1rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .benefit-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .testimonial {
+            background: linear-gradient(135deg, #0d9488 0%, #16a34a 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .testimonial-blockquote {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.25rem;
+            font-style: italic;
+        }
+        
+        .cta-section {
+            padding: 4rem 1rem;
+            text-align: center;
+            background-color: #f9fafb;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="background-color: #282c34; padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" style="color: white; font-weight: bold; font-size: 1.5rem;">sales4ce</div>
+            <div class="nav-links">
+                <a href="#features" style="color: white; text-decoration: none; margin: 0 1rem;">Features</a>
+                <a href="#benefits" style="color: white; text-decoration: none; margin: 0 1rem;">Benefits</a>
+                <a href="#testimonials" style="color: white; text-decoration: none; margin: 0 1rem;">Testimonials</a>
+                <a href="/login" style="color: white; text-decoration: none; margin: 0 1rem;">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Transform Your Healthcare Sales Performance</h1>
+        <p>sales4ce is the all-in-one SaaS platform designed specifically for healthcare sales teams. Manage organizations, licenses, CME camps, and leverage AI insights for unprecedented growth.</p>
+        <a href="#cta" class="cta-button">Get Started Today</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Multi-Tenant Management</h3>
+                    <p>Effortlessly manage multiple healthcare organizations with customizable plans and license allocations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔑</div>
+                    <h3>License Control</h3>
+                    <p>Role-based licensing system with expiration dates and easy distribution via invite URLs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>CME Camp Management</h3>
+                    <p>Plan, organize, and track Continuing Medical Education events for your sales team.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Integration</h3>
+                    <p>Leverage AI insights with your own API keys for personalized sales recommendations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Performance Analytics</h3>
+                    <p>Track sales performance, team productivity, and campaign effectiveness with detailed reports.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Compliant</h3>
+                    <p>Built with healthcare data security standards and HIPAA compliance in mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Key Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>🚀 Increase Sales Efficiency</h3>
+                    <p>Streamline your sales processes with integrated tools that reduce administrative overhead.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🧠 Leverage AI Insights</h3>
+                    <p>Make data-driven decisions with AI-powered recommendations tailored to healthcare markets.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>👥 Improve Team Coordination</h3>
+                    <p>Centralize communication and collaboration across your entire sales organization.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>📈 Boost Revenue Growth</h3>
+                    <p>Track performance metrics and optimize strategies for maximum revenue potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonial">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">What Our Customers Say</h2>
+            <blockquote class="testimonial-blockquote">
+                "sales4ce transformed our healthcare sales approach. The CME camp management feature alone saved us 20 hours per month in administrative tasks, while the AI insights helped us identify new market opportunities we would have otherwise missed."
+            </blockquote>
+            <p>- Dr. Sarah Johnson, Sales Director at MedTech Solutions</p>
+        </div>
+    </section>
+
+    <section id="cta" class="cta-section">
+        <h2>Ready to Transform Your Sales Performance?</h2>
+        <p>Join hundreds of healthcare organizations using sales4ce to drive growth and efficiency.</p>
+        <a href="/signup" class="cta-button">Start Free Trial</a>
+        <p style="margin-top: 1rem; color: #6b7280;">No credit card required. 14-day free trial.</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/about">About</a>
+                <a href="/features">Features</a>
+                <a href="/pricing">Pricing</a>
+                <a href="/docs">Documentation</a>
+                <a href="/blog">Blog</a>
+                <a href="/support">Support</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+            </div>
+            <p>&copy; 2025 sales4ce. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

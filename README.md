@@ -1,6 +1,10 @@
-# gbsales4ce
+# sales4ce - Healthcare Sales SaaS Platform
 
 A comprehensive SaaS platform for healthcare sales teams with AI-powered insights and CME camp management.
+
+## Live Demo
+
+Visit our [live landing page](https://healthcare-sales-saas.netlify.app) to see the platform in action.
 
 ## Features
 
@@ -21,7 +25,7 @@ A comprehensive SaaS platform for healthcare sales teams with AI-powered insight
 ## Project Structure
 
 ```
-gbsales4ce/
+sales4ce/
 ├── src/
 │   ├── frontend/
 │   │   ├── components/
@@ -31,6 +35,10 @@ gbsales4ce/
 │   │   │   ├── CmeCampManagement.js
 │   │   │   └── AIIntegration.js
 │   │   ├── App.js
+│   │   ├── index.html
+│   │   ├── landing.html
+│   │   ├── login.html
+│   │   ├── signup.html
 │   │   └── styles.css
 │   └── backend/
 │       ├── functions/
@@ -50,6 +58,7 @@ gbsales4ce/
 │   └── index.js
 ├── migrations/
 │   └── 001-complete-schema.sql
+├── USER_MANUAL.md
 ├── package.json
 ├── netlify.toml
 └── README.md
@@ -70,10 +79,10 @@ The database schema is defined in [migrations/001-complete-schema.sql](migration
 
 ```bash
 # Install globally
-npm install -g gbsales4ce
+npm install -g sales4ce
 
 # Initialize project
-gbsales4ce init
+sales4ce init
 ```
 
 ### Step 2: Configure Environment Variables
@@ -132,7 +141,7 @@ netlify deploy
 
 ```bash
 # Deploy using the built-in CLI command
-gbsales4ce deploy
+sales4ce deploy
 ```
 
 ### Netlify Configuration
@@ -149,13 +158,17 @@ gbsales4ce deploy
 
 ## CLI Commands
 
-- Initialize project: `gbsales4ce init`
-- Deploy: `gbsales4ce deploy`
-- Create tenant: `gbsales4ce create-tenant <orgName>`
-- List licenses: `gbsales4ce licenses:list <orgId>`
-- Create license: `gbsales4ce licenses:create <orgId> <role> <name>`
-- Revoke license: `gbsales4ce licenses:revoke <orgId> <licenseId>`
-- Apply migrations: `gbsales4ce migrate`
+- Initialize project: `sales4ce init`
+- Deploy: `sales4ce deploy`
+- Create tenant: `sales4ce create-tenant <orgName>`
+- List licenses: `sales4ce licenses:list <orgId>`
+- Create license: `sales4ce licenses:create <orgId> <role> <name>`
+- Revoke license: `sales4ce licenses:revoke <orgId> <licenseId>`
+- Apply migrations: `sales4ce migrate`
+
+## User Manual
+
+For detailed instructions on using the platform, please refer to the [USER_MANUAL.md](USER_MANUAL.md) file.
 
 ## Getting Started
 
