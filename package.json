@@ -1,5 +1,5 @@
 {
-  "name": "healthcare-sales-saas",
+  "name": "gbsales4ce",
   "version": "1.0.0",
   "description": "Healthcare Sales SaaS Platform",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "migrate": "node -r dotenv/config ./node_modules/.bin/node-pg-migrate up"
   },
   "bin": {
-    "healthcare-sales-saas": "./cli/index.js"
+    "gbsales4ce": "./cli/index.js"
   },
   "dependencies": {
     "express": "^4.18.2",

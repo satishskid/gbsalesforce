@@ -8,7 +8,7 @@ import { listLicenses, createLicense, revokeLicense } from './commands/manageLic
 import { migrateCommand } from './commands/migrate.js';
 
 program
-  .name('healthcare-sales')
+  .name('gbsales4ce')
   .description('CLI for Healthcare Sales SaaS Management')
   .version('2.0.0');
 

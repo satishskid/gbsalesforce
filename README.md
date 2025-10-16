@@ -1,4 +1,4 @@
-# Healthcare Sales SaaS Platform
+# gbsales4ce
 
 A comprehensive SaaS platform for healthcare sales teams with AI-powered insights and CME camp management.
 
@@ -21,7 +21,7 @@ A comprehensive SaaS platform for healthcare sales teams with AI-powered insight
 ## Project Structure
 
 ```
-healthcare-sales-saas/
+gbsales4ce/
 ├── src/
 │   ├── frontend/
 │   │   ├── components/
@@ -70,10 +70,10 @@ The database schema is defined in [migrations/001-complete-schema.sql](migration
 
 ```bash
 # Install globally
-npm install -g healthcare-sales-saas
+npm install -g gbsales4ce
 
 # Initialize project
-healthcare-sales-saas init
+gbsales4ce init
 ```
 
 ### Step 2: Configure Environment Variables
@@ -132,7 +132,7 @@ netlify deploy
 
 ```bash
 # Deploy using the built-in CLI command
-healthcare-sales-saas deploy
+gbsales4ce deploy
 ```
 
 ### Netlify Configuration
@@ -149,13 +149,13 @@ healthcare-sales-saas deploy
 
 ## CLI Commands
 
-- Initialize project: `healthcare-sales-saas init`
-- Deploy: `healthcare-sales-saas deploy`
-- Create tenant: `healthcare-sales-saas create-tenant <orgName>`
-- List licenses: `healthcare-sales-saas licenses:list <orgId>`
-- Create license: `healthcare-sales-saas licenses:create <orgId> <role> <name>`
-- Revoke license: `healthcare-sales-saas licenses:revoke <orgId> <licenseId>`
-- Apply migrations: `healthcare-sales-saas migrate`
+- Initialize project: `gbsales4ce init`
+- Deploy: `gbsales4ce deploy`
+- Create tenant: `gbsales4ce create-tenant <orgName>`
+- List licenses: `gbsales4ce licenses:list <orgId>`
+- Create license: `gbsales4ce licenses:create <orgId> <role> <name>`
+- Revoke license: `gbsales4ce licenses:revoke <orgId> <licenseId>`
+- Apply migrations: `gbsales4ce migrate`
 
 ## Getting Started
 

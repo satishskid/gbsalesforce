@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Healthcare Sales SaaS Platform</h1>
+        <h1>gbsales4ce Platform</h1>
         <nav>
           <ul>
             <li><a href="#dashboard">Dashboard</a></li>
@@ -18,7 +18,7 @@ function App() {
       <main>
         <section id="dashboard">
           <h2>Admin Dashboard</h2>
-          <p>Welcome to the Healthcare Sales SaaS Platform</p>
+          <p>Welcome to the gbsales4ce Platform</p>
         </section>
       </main>
     </div>

@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function init() {
-  console.log('Initializing Healthcare Sales SaaS Platform...');
+  console.log('Initializing gbsales4ce Platform...');
   
   // Check if .env file exists, if not create it
   const envPath = path.join(__dirname, '../../.env');

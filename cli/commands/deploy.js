@@ -1,5 +1,5 @@
 function deploy() {
-  console.log('Deploying Healthcare Sales SaaS Platform...');
+  console.log('Deploying gbsales4ce Platform...');
   
   // In a real implementation, this would:
   // 1. Build the frontend application
